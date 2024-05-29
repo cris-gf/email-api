@@ -1,8 +1,6 @@
 <?php
 
-use App\Http\Controllers\MailController;
-use App\Notifications\FormNotification;
-use Illuminate\Http\Request;
+use App\Http\Controllers\Api\ProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,4 +14,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::post('/send', [MailController::class, 'sendNotification']);
+Route::post('product', [ProductController::class, 'store']);

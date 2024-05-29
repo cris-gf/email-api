@@ -3,15 +3,14 @@
 namespace App\Notifications;
 
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 
-class FormNotification extends Notification
+class ProductNotification extends Notification
 {
     use Queueable;
 
-    public $details;
+    public array $details;
 
     /**
      * Create a new notification instance.
@@ -51,7 +50,6 @@ class FormNotification extends Notification
             ->line('Nombre del Producto: '.$this->details['productName'])
             ->line('Cantidad del Producto: '.$this->details['quantity'])
             ->line('Precio del Producto: '.$this->details['amount'])
-            //->action('Cancelar Cotización', $url)
             ->salutation('Saludos, DC');
     }
 
