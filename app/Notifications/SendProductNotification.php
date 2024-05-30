@@ -42,7 +42,7 @@ class SendProductNotification extends Notification
         return (new MailMessage)
             ->subject('Envío Producto')
             ->greeting('Nuevo Envío de Producto')
-            ->line('Se ha enviado el producto:')
+            ->line('Se ha enviado el producto, gracias por su compra.')
             ->line('Código: '.$this->details['productCode'])
             ->line('Nombre: '.$this->details['productName'])
             ->line('Cantidad: '.$this->details['quantity'])
